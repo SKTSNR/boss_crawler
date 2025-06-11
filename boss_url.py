@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 # @Time : 2025/5/13 13:48
-# @Author : QPK
 # @File : drission_boss.py
 # @Project : boss.py
 # @Software : PyCharm
@@ -14,13 +13,15 @@ from DrissionPage import ChromiumPage
 from selenium.common.exceptions import TimeoutException
 from tqdm import tqdm
 
-# 要爬取的关键词列表
+# 要爬取的关键词列表   自定义
+# 例子
 KEYWORDS = [
     '直播', '电商', '主播', '助播',
     '带货', '卖货', '选品', '互联网营销'
 ]
 
-# 要爬取的城市及其对应编码
+# 要爬取的城市及其对应编码  自定义
+# 例子
 CITIES = {
     '常德': '101250600',
     '邵阳': '101250900'

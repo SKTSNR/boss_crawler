@@ -11,17 +11,18 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 
+# 读取上一步爬好的csv
 file_path = 'job_list - 邵阳.csv'
 data = pd.read_csv(file_path)
 
 chrome_options = Options()
 chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:9222")
-print('1')
-# service = Service(ChromeDriverManager().install())
-# driver = webdriver.Chrome(service=service, options=chrome_options)
+
+
+# 路径修改为chromedriver.exe所在路径
 service = Service(r"D:\chromedriver\chromedriver.exe")
 driver = webdriver.Chrome(options=chrome_options)
-print('2')
+
 
 # 用于存储当前批次未保存的记录
 batch_details = []
